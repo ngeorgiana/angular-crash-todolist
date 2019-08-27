@@ -14,7 +14,7 @@ export class TodoItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  //Set finamic classes
+  //Set dinamic classes
   setClasses() {
     let classes = {
       todo: true,
@@ -23,4 +23,12 @@ export class TodoItemComponent implements OnInit {
 
     return classes;
   }
+  //Set events
+  onToggle(todo) {
+    todo.completed = !todo.completed;
+  }
+  onDelete(todo) {
+    console.log('delete')
+  }
+
 }
