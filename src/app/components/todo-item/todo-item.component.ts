@@ -8,9 +8,19 @@ import { Todo } from 'src/app/models/Todo';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  //Set finamic classes
+  setClasses() {
+    let classes = {
+      todo: true,
+      'is-completed': this.todo.completed
+    }
+
+    return classes;
+  }
 }
